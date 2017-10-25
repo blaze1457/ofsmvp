@@ -1,0 +1,24 @@
+ <!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+<definition name="two-column-layout" path="/matrimony/kernel.jsp">
+    <put name="header" value="/matrimony/header.jsp" />
+	<put name="left-content" value="/matrimony/left.jsp"/>
+	<put name="main-content" />
+    <put name="footer" value="/matrimony/footer.jsp" />
+ </definition>
+ <definition name="tile.sample.login.success" extends="two-column-layout">
+		  <put name="main-content" value="/matrimony/success.jsp"/>
+ </definition>
+ <definition name="view" extends="two-column-layout">
+		  <put name="main-content" value="/matrimony/success.jsp"/>
+ </definition>
+ <definition name="homepage" extends="two-column-layout">
+		  <put name="main-content" value="/matrimony/success.jsp"/>
+ </definition>
+ <definition name="modulepage" extends="two-column-layout">
+		  <put name="main-content" value="/matrimony/welcome.jsp"/>
+ </definition>
+</tiles-definitions>
+

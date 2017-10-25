@@ -1,0 +1,80 @@
+	<HTML xmlns:matrimony="urn:scheman-microsoft-com:vml">
+<style> matrimony\:* { behavior: url(#default#VML);</style>
+<body bgcolor="#224431">
+<script>
+	document.write('<matrimony:bbackground fillcolor="gray" rgb(55,229,98)>');
+	document.write('<matrimony:fill type="gradient" color2="white" sangle="200" /></matrimony:background>');
+	var spcs="&nbsp;&nbsp;";
+	var ct=0;
+	while(ct++<200) spcs+="&nbsp;&nbsp;"
+	document.write("<title>::&nbsp;&nbsp;Matrimony.com&nbsp;&nbsp;::"+spcs+"</title>");
+	var j=0,n=0;
+	var arr=["Services","Products","Banking","Technolgies","Careers","Contact","Alumini"];
+	function showId(obj) {status=obj.id;}
+	var runtimecolor;
+	function fadeProgress() {
+	if(document.layers) return;
+	j+=5;
+	a=j+150;
+	document.getElementById('td'+n).style["backgroundColor"]="rgb("+(a)+","+(a+200)+","+(a)+")"
+	runtimecolor="rgb("+(a+200)+","+(a+50)+","+(a+10)+")";
+	if(n==(arr.length-1)) n=0;
+	else n++;
+	if(j>100) j=5;
+	anim=setTimeout("fadeProgress()",10);
+	}
+	cursor=document.all?"hand":"pointer";
+	width=parseInt(780/arr.length);
+	classtext="style='font:bold 11px tahoma;color:black;-moz-border-radius:20px;cursor:"+cursor+"'"
+	function ceaseOff(evt) {
+	if(window.anim) clearTimeout(anim);
+	}
+	function rollOver() {
+	arguments[0].style["background"]="lightgreen";
+	}
+	function rollOut() {
+	arguments[0].style["background"]=runtimecolor//"transparent";
+	}
+	document.write("<table width=150 cellspacing=1 id=fader cellpadding=4 bgcolor=gray onmouseover=ceaseOff(event); onmouseout=fadeProgress();>");
+	for(var c=0;c<arr.length;c++) document.write("<TR><td onselectstart='return false' oncontextmenu='return false' width=111 onmouseover=rollOver(this); onmouseout=rollOut(this); id='td"+c+"' "+classtext+" oonmouseover=showId(this); align=center nowrap>"+arr[c]+"</td></tr>");
+	document.write("</table>");
+	fadeProgress();
+	document.body.style["cssText"]="margin:0px;overflow-x:hidden;overflow-y:scroll";
+	onload=function() {
+	var ipt=document.getElementsByTagName("INPUT");
+	var tar=document.getElementsByTagName("TEXTAREA");
+	var but=document.getElementsByTagName("BUTTON");
+	var comb=document.getElementsByTagName("SELECT");
+	 for(var j=0;j<but.length;j++) {
+	 but[j].style.cssText="color:aliceblue;width:100px;border:1px solid gray;background:maroon;font:bold 11px tahoma;height:20px;-moz-border-radius-bottomleft:0px;-moz-border-radius-bottomright:0px;-moz-border-radius-topleft:20px;-moz-border-radius-topright:20px;filter:alpha(style=3);padding-bottom:2px;cursor:"+cursor;
+	 but[j].onmouseover=function() { this.style.background='green'}
+	 but[j].onmouseout=function() {this.style.background="maroon"}
+	 }
+	 for(var j=0;j<ipt.length;j++) {
+	 if(ipt[j].type!="checkbox" && ipt[j].type!="radio") {
+ 	 ipt[j].style.cssText="padding-top:2px;padding-left:5px;padding-right:5px;border:1px solid gray;background:#dbd9e1;font:bold 11px tahoma;height:20px;width:200px;-moz-border-radius-bottomleft:20px;-moz-border-radius-bottomright:0px;-moz-border-radius-topleft:0px;-moz-border-radius-topright:20px"
+	 ipt[j].onfocus=function() { this.style.background='royalblue';this.style.color='aliceblue';}
+	 ipt[j].onblur=function() {this.style.background="#dbd9e1";this.style.color='black';}
+		 }
+	 }
+	 for(var j=0;j<tar.length;j++) {
+	 tar[j].style.cssText="padding-top:2px;padding-left:5px;padding-right:5px;border:1px solid gray;background:lightgreen;font:bold 11px tahoma;height:20px;width:200px;-moz-border-radius-bottomleft:20px;-moz-border-radius-bottomright:0px;-moz-border-radius-topleft:0px;-moz-border-radius-topright:20px"
+ 	 tar[j].onfocus=function() { this.style.background='royalblue';this.style.color='aliceblue';}
+	 tar[j].onblur=function() {this.style.background="whitesmoke";this.style.color='lightslategray';}
+
+	 }
+	 for(var j=0;j<comb.length;j++) {
+  	 comb[j].style.cssText="padding-top:2px;border:1px solid gray;background:lightgreen;font:bold 11px tahoma;height:20px;"
+	 comb[j].onfocus=function() { this.style.background='royalblue';this.style.color='aliceblue';}
+	 comb[j].onblur=function() {this.style.background="whitesmoke";this.style.color='lightslategray';}
+
+	 }
+	 document.oncontextmenu=function() {
+		if(event.srcElement.tagName=="BODY") {
+		 location="view-source:"+location;
+	 	 return false;}	else return false;}
+		 try {
+			disableAnchor();
+		     } catch(Exception) { }
+	}
+</script><BR><center><input type=text>&nbsp;&nbsp;<button type=submit>Check</button>
