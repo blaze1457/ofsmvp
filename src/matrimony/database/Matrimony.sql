@@ -1,4 +1,4 @@
-create table Matrimony_Customer_Info (
+create table `matrimony`.`Matrimony_Customer_Info` (
 Profile_Id		varchar(10)	not null,
 Name			varchar(50)	not null,
 Age  			varchar(15)	not null,
@@ -37,9 +37,9 @@ Email_Id		varchar(50)	not null,
 Password		varchar(20)	not null,
 			primary key (Profile_Id),
 			unique  key (Email_Id)
-) type=innodb;
+)Engine=InnoDB;
 
-create table Matrimony_Profiles (
+create table `matrimony`. `Matrimony_Profiles` (
 Profile_Id		varchar(10)	not null,
 Email_Id		varchar(50)	not null,
 Secure			varchar(5)	not null,
@@ -47,9 +47,9 @@ Photo			BLOB		,
 			primary key (Profile_Id),
 			unique  key (Email_Id),
 foreign key(Profile_Id)    references Matrimony_Customer_Info(Profile_id) on delete cascade
-) type=innodb;
+) Engine=InnoDB;
 
-CREATE TABLE Matrimony_Profile_Management (
+CREATE TABLE `matrimony`.`Matrimony_Profile_Management` (
 Profile_Id		varchar(10) NOT NULL,
 Email_Id		varchar(50) not null,
 Membership_Type		varchar(30) NOT NULL,
@@ -63,10 +63,10 @@ End_date		date	    NOT NULL,
 			unique  key (Email_Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-ALTER TABLE `matrimony_profile_management`
-ADD FOREIGN KEY (Profile_Id) REFERENCES matrimony_customer_info (Profile_Id) ON DELETE CASCADE;
+ALTER TABLE `Matrimony_profile_management`
+ADD FOREIGN KEY `matrimony`.`Matrimony_profile_managemen`(Profile_Id) REFERENCES matrimony_customer_info (Profile_Id) ON DELETE CASCADE;
 
-Create table Matrimony_Partner_Specification (
+Create table `matrimony`.`Matrimony_Partner_Specification` (
 Profile_Id		varchar(10)	not null,
 Email_Id		varchar(50)     not null,
 Details			varchar(500)	not null,
@@ -89,9 +89,9 @@ Conclusion		varchar(100)	not null,
 			primary key (Profile_Id),
 			unique  key (Email_Id),
 foreign key(Profile_Id)    references Matrimony_Customer_Info(Profile_id) on delete cascade
-)
+)Engine=InnoDB;
 
-create table Matrimony_Response (
+create table `matrimony`.`Matrimony_Response`(
 Source_Id		varchar(10)	not null,
 Target_Id		varchar(10)	not null,
 Status			varchar(10)	not null,
@@ -100,9 +100,9 @@ Remarks			varchar(100)	not null,
 			primary key (Source_Id),
 			 unique key  (Target_Id),
 foreign key(Source_Id)    references Matrimony_Customer_Info(Profile_id) on delete cascade
-) type=innodb;
+) Engine=InnoDB;
 
-create table Matrimony_Messages (
+create table `matrimony`.`Matrimony_Messages` (
 msgid			int(5)		not null,
 Source_Id		varchar(10)	not null,
 Target_Id		varchar(10)	not null,
@@ -110,9 +110,9 @@ Subject			varchar(100)	not null,
 Message			varchar(500)	not null,
 Msgdate			DATE		not null,
 			primary key	(msgid)
-) type=innodb;
+) Engine=InnoDB;
 
-create table Matrimony_Horoscope(
+create table `matrimony`.`Matrimony_Horoscope`(
 Profile_Id		varchar(10)	not null,
 Groom_Name		varchar(50)	not null,
 Groom_Dob		date		not null,
@@ -124,4 +124,4 @@ Bride_Tob		varchar(10)	not null,
 Bride_Pob		varchar(50)	not null,
 Email_id		varchar(50)	not null,
 Matchwith		varchar(15)	not null
-)type=innodb;
+)Engine=InnoDB;

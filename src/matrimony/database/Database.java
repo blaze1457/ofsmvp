@@ -58,8 +58,14 @@ import java.sql.*;
 				this.scroll = cn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 		}
 
-		public static Database newInstance(HttpServletRequest req,HttpServletResponse res) throws Exception{
-				Database db=new Database(req,res);
+		public static Database newInstance(HttpServletRequest req,HttpServletResponse res) throws IOException{
+				Database db = null;
+				try {
+					db = new Database(req,res);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				return db;
 		}
 		
