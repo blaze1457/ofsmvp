@@ -737,13 +737,11 @@
 					url = new StringBuffer(request.getContextPath());</code></li>
 			<li><i>Snag a reference to the subscription bean (for this
 					iteration)<br>
-			</i>
-			<code>subscription = (Subscription)
+			</i> <code>subscription = (Subscription)
 					pageContext.findAttribute(name);</code></li>
 			<li><i>Append the username and host from the bean to the
 					path request.<br>
-			</i>
-			<code>
+			</i> <code>
 					url.append(&quot;&amp;username=&quot;);
 					url.append(BeanUtils.filter(subscription.getUser().getUsername()));<br>
 					url.append(&quot;&amp;host=");&nbsp;<br>

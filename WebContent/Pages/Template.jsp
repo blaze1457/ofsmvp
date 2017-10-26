@@ -77,7 +77,7 @@
 				out.println("<LINK HREF=\""+style+"\" REL=\"STYLESHEET\">"); 
 				out.println("<SCRIPT SRC=\""+templatejs+"\"></SCRIPT>"); 
 				out.println("<SCRIPT SRC=\""+itemsjs+"\"></SCRIPT>"); 
-				out.println("<SCRIPT>site.header('Telugu Matrimony.com','"+watermark+"','"+toplogo+"')</SCRIPT>"); 
+				out.println("<SCRIPT>site.header('Matrimony.com','"+watermark+"','"+toplogo+"')</SCRIPT>"); 
 			}
 		
 			public void getTime() throws Exception{
@@ -335,8 +335,7 @@
 			foot += "<A HREF='javascript:void(0)'>Media</a>"+nbsp+"|"+nbsp;	
 			foot += "<A HREF='javascript:void(0)'>Payment</a>";
 			foot += "</TD></TR></TABLE>";
-			foot += "<P align=\"center\"><font color=\"gray\"><B>Best Viewed in 800x600. Most compatible with IE 5.0 and Netscape 7.0 and above.</font></B>";		    
-		    foot += "<center><br><img src='"+getPath("/Images/wedding.gif")+"' width=\"100\" height=\"54\" alt=\"Matrimony.com\" border=\"0\" hspace=\"0\"><br><font color=\"teal\" size=2 face=tahoma><B>Matrimony.com</B></font></center>";	    
+			foot += "<P align=\"center\"><font color=\"gray\"><B>Best Viewed in 800x600. Most compatible with IE 5.0 and Netscape 7.0 and above.</font></B>";		     
 			foot += "</p></BODY>";
 			out.println(hscope+foot);
 	   }
@@ -348,4 +347,11 @@
 	t.loadJavaScript();
 	if(session.getAttribute("Client")==null) t.getLoginPanel();
 	else t.getLinksPanel();
-%></HEAD><div id=box></div><table align=center cellspacing=0 cellpadding=0 width=780><TR><TD valign=top  valign=top><%t.getMenuList();%></TD><TD valign=top>
+%></HEAD>
+<div id=box></div>
+<table align=center cellspacing=0 cellpadding=0 width=780>
+	<TR>
+		<TD valign=top valign=top>
+			<%t.getMenuList();%>
+		</TD>
+		<TD valign=top>

@@ -1,20 +1,36 @@
 package matrimony.database;
-import java.net.URL;
-import java.util.Vector;
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import org.w3c.dom.DOMException;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Types;
+import java.util.Vector;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.PageContext;
-import java.sql.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.DOMException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 	public class Database 	{
 
 				private	int update=0;
@@ -44,7 +60,7 @@ import java.sql.*;
 				private ResultSet rs=null;
 				private ResultSetMetaData rsmd=null;
 
-		private Database(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		private Database(HttpServletRequest request,HttpServletResponse response) throws IOException {
 				this.xml = request.getContextPath()+"/database/database.xml";
 				this.request = request;	
 				this.response = response;
@@ -52,12 +68,32 @@ import java.sql.*;
 				this.client = this.session.getAttribute("Client")!=null?this.session.getAttribute("Client").toString():"nothing";
 				this.url = new URL(request.getScheme(),request.getServerName(),request.getServerPort(),xml);
 				this.factory =  DocumentBuilderFactory.newInstance();
-				this.domBuilder = factory.newDocumentBuilder();
-				this.doc = domBuilder.parse(url.openStream());
+				try {
+					this.domBuilder = factory.newDocumentBuilder();
+				} catch (ParserConfigurationException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				try {
+					this.doc = domBuilder.parse(url.openStream());
+				} catch (SAXException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				this.root = doc.getDocumentElement();
 				this.cn = getConnection();
-				this.st = cn.createStatement();
-				this.scroll = cn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+				try {
+					this.st = cn.createStatement();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
+					this.scroll = cn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		}
 
 		public static Database newInstance(HttpServletRequest req,HttpServletResponse res) throws IOException{

@@ -15,7 +15,5 @@ if(session.getAttribute("Client")==null) {
 %>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

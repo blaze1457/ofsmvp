@@ -13,7 +13,5 @@
 </TABLE>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

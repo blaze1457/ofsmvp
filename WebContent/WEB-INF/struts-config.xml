@@ -26,8 +26,8 @@
 		<forward name="creditcard" path="/SecureProfile.do" />
 	</global-forwards>
 	<action-mappings>
-		<action path="/Signin" type="com.ofs.profile.SigninAction" input="/Pages/index.jsp"
-			name="SigninForm" scope="request" validate="true">
+		<action path="/Signin" type="com.ofs.profile.SigninAction"
+			input="/Pages/index.jsp" name="SigninForm" scope="request" validate="true">
 			<forward name="success" path="/Pages/PhotoUpload.jsp" />
 		</action>
 		<action path="/ForgotPassword" type="com.ofs.profile.ForgotAction"
@@ -42,8 +42,9 @@
 		</action>
 		<action path="/SecureProfile" type="matrimony.com.SecureProfile"
 			scope="request" name="SecureForm" validate="false" />
-		<action path="/OpenHold" type="com..ofs.response/OpenHold" input="/Pages/ProfileManagement.jsp"
-			name="OpenHoldForm" scope="request" validate="true">
+		<action path="/OpenHold" type="com..ofs.response/OpenHold"
+			input="/Pages/ProfileManagement.jsp" name="OpenHoldForm" scope="request"
+			validate="true">
 			<forward name="success" path="/Pages/PhotoUpload.jsp" />
 		</action>
 		<action path="/PartnerSpecification" type="com.ofs.horscope.PartnerPreference"
@@ -61,12 +62,14 @@
 			validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>
-		<action path="/SendMessage" type="com.ofs.response.Message" input="/Pages/ForwardMessage.jsp"
-			name="MessageForm" scope="request" validate="true">
+		<action path="/SendMessage" type="com.ofs.response.Message"
+			input="/Pages/ForwardMessage.jsp" name="MessageForm" scope="request"
+			validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>
-		<action path="/BestMatch" type="com.ofs.horscope.Horoscope" input="/Pages/BestMatch.jsp"
-			name="HoroscopeForm" scope="request" validate="true">
+		<action path="/BestMatch" type="com.ofs.horscope.Horoscope"
+			input="/Pages/BestMatch.jsp" name="HoroscopeForm" scope="request"
+			validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>
 		<action path="/Search" type="matrimony.com.Search" input="/Pages/index.jsp"

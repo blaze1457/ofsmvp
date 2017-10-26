@@ -10,7 +10,5 @@
 <HEAD>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

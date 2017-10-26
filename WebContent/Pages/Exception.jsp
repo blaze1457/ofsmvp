@@ -11,11 +11,9 @@
 <HEAD>
 <html:errors />
 <Center>
-	<BR>
-	<BR>
+	<BR> <BR>
 	<h4><%=error%></h4>
-	<BR>
-	<BR>
+	<BR> <BR>
 </center>
 <center>
 	<button class=button accesskey="N"
@@ -32,7 +30,5 @@
 <SCRIPT>if(top!=self) top.location=self.location</script>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

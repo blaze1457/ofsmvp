@@ -6,5 +6,5 @@
 <HEAD>
 <table align=center cellspacing=2 cellpadding=3 width=400>
 	<%t.getSearchBox();%>
-	<%t.setFooter();%></body>
+	</body>
 	</html:html>

@@ -1,6 +1,6 @@
 <%@ page import="matrimony.database.Database"%>
 <%@ page import="java.sql.*"%>
-<title>Telugu Matrimony.com</title>
+<title>Matrimony.com</title>
 </head>
 <STYLE>
 H4 {

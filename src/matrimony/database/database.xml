@@ -10,7 +10,7 @@
 			<className>com.mysql.jdbc.Driver</className>
 			<url>jdbc:mysql://localhost:8080</url>
 			-->
-			<!-- <url>jdbc:mysql://127.0.0.1:8080</url> -->
+			<!-- <url>jdbc:mysql://localhost:8080</url> -->
 			<database>matrimony</database>
 			<user>root</user>
 			<password>Sql123$</password>

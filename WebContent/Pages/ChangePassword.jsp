@@ -73,8 +73,6 @@
 		</html:form>
 	</table>
 </fieldset>
-<%t.setFooter();%>
-
 </BODY>
 </html:html>
 

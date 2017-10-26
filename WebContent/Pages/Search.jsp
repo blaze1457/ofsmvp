@@ -14,8 +14,8 @@
 		<TR>
 			<TD align=right class=cell><BR>Looking
 				For&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-			<select class=select name=lookingfor><option value="female">Bride</option>
+			<TD class=cell><BR> <select class=select name=lookingfor><option
+						value="female">Bride</option>
 					<option value="male">Bride Groom</option></TD>
 		</TR>
 		<TR>
@@ -92,8 +92,6 @@
 </TABLE>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </BODY>
 </html:html>
 

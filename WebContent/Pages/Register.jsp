@@ -20,9 +20,8 @@
 		<TR>
 			<TD align=right class=cell><BR>Profile
 				Id&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-			<html:text styleClass="input" property="profileid"
-					onkeypress="return blockKey(event,6)" /></TD>
+			<TD class=cell><BR> <html:text styleClass="input"
+					property="profileid" onkeypress="return blockKey(event,6)" /></TD>
 		</TR>
 		<TR>
 			<TD align=right class=cell>Name&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
@@ -96,8 +95,7 @@
 		<TR>
 			<TD align=right class=cell><BR>Mother
 				Tongue&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-				<%t.buildMenu(t.languages,"mothertongue",150);%></TD>
+			<TD class=cell><BR> <%t.buildMenu(t.languages,"mothertongue",150);%></TD>
 		</TR>
 		<TR>
 			<TD align=right class=cell>Physical
@@ -181,10 +179,9 @@
 		</TR>
 		<TR>
 			<TD align=right class=cell>Ref By&nbsp;&nbsp;:&nbsp;&nbsp;<BR>
-			<BR></TD>
+				<BR></TD>
 			<TD class=cell><html:text styleClass="input" property="refby"
-					onkeypress="return alphaNumeric(event,20)" /><BR>
-			<BR></TD>
+					onkeypress="return alphaNumeric(event,20)" /><BR> <BR></TD>
 		</TR>
 		<TR bgcolor=#594344>
 			<Th style="color: aliceblue; font: bold 12px tahoma" colspan=2
@@ -193,8 +190,7 @@
 		<TR>
 			<TD align=right class=cell><BR>Marital
 				Status&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<td class=cell><BR>
-				<%t.buildMenu(t.marstatus,"status",150,"ctrl");%></td>
+			<td class=cell><BR> <%t.buildMenu(t.marstatus,"status",150,"ctrl");%></td>
 		</tr>
 		<TR>
 			<TD align=right class=cell>No.Of
@@ -244,10 +240,9 @@
 		</tr>
 		<TR>
 			<TD align=right class=cell>Employed In&nbsp;&nbsp;:&nbsp;&nbsp;<BR>
-			<BR></TD>
+				<BR></TD>
 			<TD class=cell>
-				<%t.buildMenu(t.employment,"employment",150,"ctrl");%><BR>
-			<BR>
+				<%t.buildMenu(t.employment,"employment",150,"ctrl");%><BR> <BR>
 			</td>
 		</tr>
 		<TR bgcolor=#594344>
@@ -257,9 +252,8 @@
 		<TR>
 			<Td align=right class=cell><BR>Provide E-Mail
 				Id&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-			<html:text styleClass="input" property="email"
-					onkeypress="return emailID(event,20)" /></TD>
+			<TD class=cell><BR> <html:text styleClass="input"
+					property="email" onkeypress="return emailID(event,20)" /></TD>
 		</TR>
 		<TR>
 			<Td align=right class=cell>Choose
@@ -289,15 +283,11 @@
 				</button>&nbsp;&nbsp;&nbsp;&nbsp;
 				<button class=button type=reset accesskey="C">
 					<U>C</U>lear
-				</button>
-				<BR>
-			<BR></TD>
+				</button> <BR> <BR></TD>
 		</TR>
 	</html:form>
 </TABLE>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

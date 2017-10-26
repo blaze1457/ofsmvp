@@ -17,7 +17,6 @@
 	t.getError();
 	out.println("<BR><center><button style='width:100px' class=button type=submit accesskey='Y'><U>Y</u></U>es</button>&nbsp;&nbsp;&nbsp;&nbsp;");
 	out.println("<button style='width:100px' class=button type=reset accesskey='N' onclick='location=\"PhotoUpload.jsp\"'><U>N</U>o</button></FORM></center><Br><BR><BR><BR>");
-	t.setFooter();
 %></BODY>
 </html>
 

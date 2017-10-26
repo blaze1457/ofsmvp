@@ -20,7 +20,5 @@
 			not only belonging to same language, religion but also residing
 			globally at various locations.</TD>
 	</tr>
-	<%t.getSearchBox();%>
-	<%t.setFooter();%>
 	</body>
 	</html:html>

@@ -44,8 +44,7 @@
 		<TR>
 			<TD align=right class=cell><BR>Marital
 				Status&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<td class=cell><BR>
-				<%t.buildMenu(t.marstatus,"martialstatus",150,"ctrl");%></td>
+			<td class=cell><BR> <%t.buildMenu(t.marstatus,"martialstatus",150,"ctrl");%></td>
 		</tr>
 		<TR>
 			<TD colspan=2 align=center><html:errors property="havechildren" /></TD>
@@ -66,6 +65,7 @@
 			<TD align=right class=cell>Height&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
 			<TD class=cell><html:text styleClass="input" style="width:30px"
 					property="height" onkeypress="return blockKey(event,2)" />&nbsp;&nbsp;&nbsp;
+
 			
 		</TR>
 		<TR>
@@ -74,8 +74,7 @@
 		<TR>
 			<TD align=right class=cell><BR>Mother
 				Tongue&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-				<%t.buildMenu(t.languages,"mothertongue",150);%></TD>
+			<TD class=cell><BR> <%t.buildMenu(t.languages,"mothertongue",150);%></TD>
 		</TR>
 		<TR>
 			<TD colspan=2 align=center><html:errors
@@ -183,15 +182,11 @@
 				</button>&nbsp;&nbsp;&nbsp;&nbsp;
 				<button class=button type=reset accesskey="C">
 					<U>C</U>lear
-				</button>
-				<BR>
-			<BR></TD>
+				</button> <BR> <BR></TD>
 		</TR>
 	</html:form>
 </TABLE>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

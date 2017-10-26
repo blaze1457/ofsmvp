@@ -19,11 +19,9 @@
 			</td>
 		</TR>
 		<TR>
-			<TD align=right class=cell><BR>
-			<BR>Profile Id&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-			<BR>
-			<input class="input"
+			<TD align=right class=cell><BR> <BR>Profile
+				Id&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
+			<TD class=cell><BR> <BR> <input class="input"
 				value="<%=session.getAttribute("Client").toString()%>"
 				name="profileid" readonly /></TD>
 		</TR>
@@ -75,15 +73,11 @@
 				</button>&nbsp;&nbsp;&nbsp;&nbsp;
 				<button class=button type=reset accesskey='C'>
 					<U>C</U>lear
-				</button>
-				<BR>
-			<BR></TD>
+				</button> <BR> <BR></TD>
 		</TR>
 	</html:form>
 </TABLE>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

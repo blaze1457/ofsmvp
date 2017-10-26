@@ -29,13 +29,10 @@ if(session.getAttribute("Client")==null) {
 			<TD algin=center colspan=2><html:errors property="sourceid" /></TD>
 		</TR>
 		<TR>
-			<TD align=right class=cell><BR>
-			<BR>
-			<u>F</U>rom&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-			<BR>
-			<input class=input accesskey='F' style='width: 400px' name="sourceid"
-				readonly value="<%=session.getAttribute("Client")%>"></TD>
+			<TD align=right class=cell><BR> <BR> <u>F</U>rom&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
+			<TD class=cell><BR> <BR> <input class=input
+				accesskey='F' style='width: 400px' name="sourceid" readonly
+				value="<%=session.getAttribute("Client")%>"></TD>
 		</TR>
 		<TR>
 			<TD algin=center colspan=2><html:errors property="targetid" /></TD>
@@ -68,15 +65,11 @@ if(session.getAttribute("Client")==null) {
 				</button>&nbsp;&nbsp;&nbsp;&nbsp;
 				<button class=button type=reset accesskey='C'>
 					<U>C</U>lear
-				</button>
-				<BR>
-			<BR></TD>
+				</button> <BR> <BR></TD>
 		</TR>
 	</html:form>
 </TABLE>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>

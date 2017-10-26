@@ -42,21 +42,26 @@
 
 		<info>
 
-			Validate that there is a currently logged on user, by checking for
+			Validate that there is a currently logged on user, by checking
+			for
 
 			the existence of a session-scope bean under the specified name.
 
-			If there is no such bean, forward control to the specified page,
+			If
+			there is no such bean, forward control to the specified page,
 
-			which will typically be a logon form.
-
-
-
-			name - Name of the session-scope bean to check for [user]
+			which
+			will typically be a logon form.
 
 
 
-			page - Context-relative path to the logon page [/logon.jsp]
+			name - Name of the session-scope bean
+			to check for [user]
+
+
+
+			page - Context-relative path to the logon page
+			[/logon.jsp]
 
 		</info>
 
@@ -98,17 +103,20 @@
 
 			specified base value, plus optional query parameters that
 
-			select the specified Subscription object.
+			select the
+			specified Subscription object.
 
 
 
-			name - Name of the attribute containing the specified
+			name - Name of the attribute containing
+			the specified
 
 			Subscription. [subscription]
 
 
 
-			page - Context-relative URL of the generated link
+			page - Context-relative URL
+			of the generated link
 
 		</info>
 
@@ -150,17 +158,20 @@
 
 			specified base value, plus optional query parameters that
 
-			select the specified User object.
+			select the
+			specified User object.
 
 
 
-			name - Name of the attribute containing the specified user.
+			name - Name of the attribute containing the
+			specified user.
 
 			[user]
 
 
 
-			href - Context-relative URL of the generated link
+			href - Context-relative URL of the generated
+			link
 
 		</info>
 

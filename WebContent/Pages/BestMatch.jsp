@@ -16,8 +16,8 @@
 		</TR>
 		<TR>
 			<TD align=right class=cell><BR>Name&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-			<html:text styleClass="input" property="groomname" /></TD>
+			<TD class=cell><BR> <html:text styleClass="input"
+					property="groomname" /></TD>
 		</TR>
 		<TR>
 			<TD colspan=2><html:errors property="groomyear" /></TD>
@@ -60,8 +60,7 @@
 		<TR>
 			<TD colspan=2 align=center class=cell>Please enter city, state,
 				country (This is needed to find the latitude & longitude of the
-				place.)<BR>
-			<BR>
+				place.)<BR> <BR>
 			</TD>
 		</TR>
 		<!---------------Bride Details--------------------------------->
@@ -74,8 +73,8 @@
 		</TR>
 		<TR>
 			<TD align=right class=cell><BR>Name&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD class=cell><BR>
-			<html:text styleClass="input" property="bridename" /></TD>
+			<TD class=cell><BR> <html:text styleClass="input"
+					property="bridename" /></TD>
 		</TR>
 		<TR>
 			<TD colspan=2><html:errors property="brideyear" /></TD>
@@ -118,8 +117,7 @@
 		<TR>
 			<TD colspan=2 align=center class=cell>Please enter city, state,
 				country (This is needed to find the latitude & longitude of the
-				place.)<BR>
-			<BR>
+				place.)<BR> <BR>
 			</TD>
 		</TR>
 		<TR bgcolor=#594344>
@@ -132,8 +130,7 @@
 		<TR>
 			<TD align=right class=cell><BR>E-Mail
 				Id&nbsp;&nbsp;:&nbsp;&nbsp;</TD>
-			<TD><BR>
-			<html:text styleClass="input" property="emailid" /></TD>
+			<TD><BR> <html:text styleClass="input" property="emailid" /></TD>
 		</TR>
 		<TR>
 			<TD align=right class=cell>Confirm E-Mail
@@ -157,9 +154,7 @@
 				</button>&nbsp;&nbsp;&nbsp;&nbsp;
 				<button class=button type=reset accesskey='C'>
 					<U>C</U>lear
-				</button>
-				<BR>
-			<BR></TD>
+				</button> <BR> <BR></TD>
 		</TR>
 </TABLE>
 </TD>
@@ -168,8 +163,6 @@
 </TABLE>
 <BR>
 <BR>
-<%t.setFooter();%>
-
 </body>
 </html:html>
 

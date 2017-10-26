@@ -21,7 +21,8 @@ public class  RegisterAction extends Action {
 				
 				String passwordwarn="Confirm Password Not Matched";
 				if(rf.getPwd1()!=null && rf.getPwd2()!=null) {
-						if(rf.getPwd1().equals(rf.getPwd2())) PASSWORD=rf.getPwd2();
+						if(rf.getPwd1().equals(rf.getPwd2())) 
+							PASSWORD=rf.getPwd2();
 						else {
 								request.setAttribute("Exception",passwordwarn);
 								return mapping.getInputForward();
