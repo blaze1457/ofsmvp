@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.horscope;
 import org.apache.struts.action.*;
 import javax.servlet.http.*;
 public class HoroscopeForm extends ActionForm {

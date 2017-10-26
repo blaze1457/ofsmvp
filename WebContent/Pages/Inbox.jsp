@@ -2,7 +2,8 @@
 <%@ taglib uri="struts/bean" prefix="bean"%>
 <%@ taglib uri="struts/logic" prefix="logic"%>
 <%@ include file="Template.jsp"%>
-<html:html><HEAD>
+<html:html>
+<HEAD>
 <%
 if(session.getAttribute("Client")==null) {
 	request.setAttribute("Exception","Invalid Session. You are Not Logged on");
@@ -12,4 +13,9 @@ if(session.getAttribute("Client")==null) {
 	pageContext.forward("index.jsp");
   } t.deleteMessages();	
 %>
-<BR><BR><%t.setFooter();%></body></html:html>
+<BR>
+<BR>
+<%t.setFooter();%>
+
+</body>
+</html:html>

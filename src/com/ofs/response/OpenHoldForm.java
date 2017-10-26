@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.response;
 import org.apache.struts.validator.ValidatorForm;
 public class OpenHoldForm extends ValidatorForm implements java.io.Serializable {
 	String profileid,mstype,cardtype,cardno;

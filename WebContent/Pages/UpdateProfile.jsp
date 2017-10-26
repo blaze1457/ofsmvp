@@ -6,5 +6,11 @@
 <%
 	t.dynamicUpload(true);
 %>
-<html:html><HEAD>
-<BR><BR><%t.setFooter();%></body></html:html>
+<html:html>
+<HEAD>
+<BR>
+<BR>
+<%t.setFooter();%>
+
+</body>
+</html:html>

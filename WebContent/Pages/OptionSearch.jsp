@@ -2,7 +2,10 @@
 <%@ taglib uri="struts/bean" prefix="bean"%>
 <%@ taglib uri="struts/logic" prefix="logic"%>
 <%@ include file="Template.jsp"%>
-<form action="<%=t.getPath("/Search.do")%>" name=hideform method=post style='display:none'><input name=profileid></form>
+<form action="<%=t.getPath("/Search.do")%>" name=hideform method=post
+	style='display: none'>
+	<input name=profileid>
+</form>
 <%
 	String props[]={
 					request.getParameter("lookingfor"),
@@ -17,5 +20,13 @@
 	String result=db.fetchRecords("Matrimony_customer_info",columns,condition,610,0,false);
 	out.println(result);
 %>
-<html:html><HEAD>
-</TR></TABLE><BR><BR><%t.setFooter();%></body></html:html>
+<html:html>
+<HEAD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<%t.setFooter();%>
+
+</body>
+</html:html>

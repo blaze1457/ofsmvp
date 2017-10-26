@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <jdbc>
-<connectionPool>
+	<connectionPool>
 		<factroyClass>com.ibm.websphere.wscontextfactroy</factroyClass>
 		<providerUrl>http://localhost:8080</providerUrl>
 		<jndi>matrimony</jndi>
-</connectionPool>
-<databases>
-	<mysql>
-		<className>com.mysql.jdbc.Driver</className>
-		<url>jdbc:mysql://localhost:8080</url> -->
-<!-- 		<url>jdbc:mysql://127.0.0.1:8080</url>
- -->		<database>matrimony</database>
-		<user>root</user>
-		<password>Sql123$</password>
-	</mysql>
-</databases>
+	</connectionPool>
+	<databases>
+		<mysql>
+			<className>com.mysql.jdbc.Driver</className>
+			<url>jdbc:mysql://localhost:8080</url>
+			-->
+			<!-- <url>jdbc:mysql://127.0.0.1:8080</url> -->
+			<database>matrimony</database>
+			<user>root</user>
+			<password>Sql123$</password>
+		</mysql>
+	</databases>
 </jdbc>

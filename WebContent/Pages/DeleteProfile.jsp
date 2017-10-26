@@ -13,5 +13,11 @@
 	if(details && profile) response.sendRedirect("Signout.jsp");
 	else out.println("Invalid Transaction");
 %>
-<html:html><HEAD>
-<BR><BR><%t.setFooter();%></body></html:html>
+<html:html>
+<HEAD>
+<BR>
+<BR>
+<%t.setFooter();%>
+
+</body>
+</html:html>

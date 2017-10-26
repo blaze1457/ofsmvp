@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.profile;
 import org.apache.struts.validator.ValidatorForm;
 public class RegisterForm extends ValidatorForm {
 	String profileid;

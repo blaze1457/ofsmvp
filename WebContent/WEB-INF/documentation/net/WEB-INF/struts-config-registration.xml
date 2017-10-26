@@ -5,49 +5,43 @@
           "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
 
 <struts-config>
-  <display-name><![CDATA[
+	<display-name><![CDATA[
      registration
   ]]>
-  </display-name>
-    <description><![CDATA[
+	</display-name>
+	<description><![CDATA[
      This is the Struts configuration file for the registration 
      portion of the example application, using the wildcard syntax.
   ]]>
-  </description>
+	</description>
 
-  <!-- ========== Form Bean Definitions =================================== -->
-  <form-beans>
+	<!-- ========== Form Bean Definitions =================================== -->
+	<form-beans>
 
-    <!-- Registration form bean -->
-    <form-bean      name="RegistrationForm"
-                    type="org.apache.struts.webapp.example.RegistrationForm"/>
+		<!-- Registration form bean -->
+		<form-bean name="RegistrationForm"
+			type="org.apache.struts.webapp.example.RegistrationForm" />
 
-  </form-beans>
+	</form-beans>
 
-  <!-- ========== Global Forward Definitions ============================== -->
-  <global-forwards>
-    <forward   name="Registration"         path="/registration.jsp"/>
-  </global-forwards>
+	<!-- ========== Global Forward Definitions ============================== -->
+	<global-forwards>
+		<forward name="Registration" path="/registration.jsp" />
+	</global-forwards>
 
-  <!-- ========== Action Mapping Definitions ============================== -->
-  <action-mappings>
+	<!-- ========== Action Mapping Definitions ============================== -->
+	<action-mappings>
 
-    <!-- Matches all edit actions (in this case, only user regstration) -->
-    <action    path="/edit*"
-               type="org.apache.struts.webapp.example.Edit{1}Action"
-               name="{1}Form"
-              scope="request"
-           validate="false">
-      <forward name="success"              path="/{1}.jsp"/>
-    </action>
+		<!-- Matches all edit actions (in this case, only user regstration) -->
+		<action path="/edit*" type="org.apache.struts.webapp.example.Edit{1}Action"
+			name="{1}Form" scope="request" validate="false">
+			<forward name="success" path="/{1}.jsp" />
+		</action>
 
-    <!-- Matches all save actions (in this case, only user registration) -->
-    <action    path="/save*"
-               type="org.apache.struts.webapp.example.Save{1}Action"
-               name="{1}Form"
-              scope="request"
-              input="{1}"/>
+		<!-- Matches all save actions (in this case, only user registration) -->
+		<action path="/save*" type="org.apache.struts.webapp.example.Save{1}Action"
+			name="{1}Form" scope="request" input="{1}" />
 
-  </action-mappings>
+	</action-mappings>
 
 </struts-config>

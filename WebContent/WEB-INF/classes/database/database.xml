@@ -1,39 +1,39 @@
 <?xml version="1.0"?>
 <jdbc>
-<connectionPool>
+	<connectionPool>
 		<factroyClass>com.ibm.websphere.wscontextfactroy</factroyClass>
 		<providerUrl>t3://localhost</providerUrl>
 		<jndi>matrimony</jndi>
-</connectionPool>
-<databases>
-	<mysql>
-		<className>com.mysql.jdbc.Driver</className>
-	<!--	<url>jdbc:mysql://localhost:3306</url> -->
-		<url>jdbc:mysql://127.0.0.1:3306</url>
-		<database>matrimony</database>
-		<user>root</user>
-		<password>Sql123$</password>
-	</mysql>
-	<sqlserver>
-		<className>com.microsoft.jdbc.sqlserver.SQLServerDriver</className>
-		<url>jdbc:sql://localhost:1433</url>
-		<database>matrimony</database>
-		<user>root</user>
-		<password>sathya</password>
-	</sqlserver>
-	<oracle>
-		<className>oracle.jdbc.driver.OracleDriver</className>
-		<url>jdbc:mysql://localhost</url>
-		<sid>matrimony</sid>
-		<user>root</user>
-		<password>sathya</password>
-	</oracle>
-	<access>
-		<className>sun.jdbc.odbc.JdbcOdbcDriver</className>
-		<url>jdbc:mysql://localhost</url>
-		<database>matrimony</database>
-		<user>""</user>
-		<password>""</password>
-	</access>
-</databases>
+	</connectionPool>
+	<databases>
+		<mysql>
+			<className>com.mysql.jdbc.Driver</className>
+			<!-- <url>jdbc:mysql://localhost:3306</url> -->
+			<url>jdbc:mysql://127.0.0.1:3306</url>
+			<database>matrimony</database>
+			<user>root</user>
+			<password>Sql123$</password>
+		</mysql>
+		<sqlserver>
+			<className>com.microsoft.jdbc.sqlserver.SQLServerDriver</className>
+			<url>jdbc:sql://localhost:1433</url>
+			<database>matrimony</database>
+			<user>root</user>
+			<password>sathya</password>
+		</sqlserver>
+		<oracle>
+			<className>oracle.jdbc.driver.OracleDriver</className>
+			<url>jdbc:mysql://localhost</url>
+			<sid>matrimony</sid>
+			<user>root</user>
+			<password>sathya</password>
+		</oracle>
+		<access>
+			<className>sun.jdbc.odbc.JdbcOdbcDriver</className>
+			<url>jdbc:mysql://localhost</url>
+			<database>matrimony</database>
+			<user>""</user>
+			<password>""</password>
+		</access>
+	</databases>
 </jdbc>

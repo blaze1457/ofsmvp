@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.profile;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionError;

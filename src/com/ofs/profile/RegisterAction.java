@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.profile;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;

@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.profile;
 import org.apache.struts.validator.ValidatorForm;
 public class ForgotForm extends ValidatorForm implements java.io.Serializable {
 	String profileid,emailid;

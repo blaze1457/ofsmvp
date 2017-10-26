@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.response;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.Action;

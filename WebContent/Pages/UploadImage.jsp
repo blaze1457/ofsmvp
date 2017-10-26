@@ -1,7 +1,8 @@
 <%@ page import="matrimony.database.Database"%>
 <%@ include file="Template.jsp"%>
 <%@ page import="java.io.*"%>
-<%t.checkSession();%><html><HEAD>
+<%t.checkSession();%><html>
+<HEAD>
 <%
 	boolean upload=db.uploadImage("matrimony_profiles");
 	if(upload) request.getRequestDispatcher("PhotoUpload.jsp").forward(request,response);

@@ -6,144 +6,130 @@
 
 
 <struts-config>
-  <display-name><![CDATA[
+	<display-name><![CDATA[
      account maintaince
   ]]>
-  </display-name>
-    <description><![CDATA[
+	</display-name>
+	<description><![CDATA[
      Allows the updating of users accounts and subscriptions.
   ]]>
-  </description>
+	</description>
 
-  <!-- ========== Form Bean Definitions =================================== -->
-  <form-beans>
+	<!-- ========== Form Bean Definitions =================================== -->
+	<form-beans>
 
-    <!-- Logon form bean -->
-    <form-bean       name="logonForm"
-                     type="org.apache.struts.validator.DynaValidatorForm">
-      <form-property name="username" type="java.lang.String"/>
-      <form-property name="password" type="java.lang.String"/>
-    </form-bean>
+		<!-- Logon form bean -->
+		<form-bean name="logonForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="username" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+		</form-bean>
 
-    <!-- Subscription form bean -->
-    <form-bean      name="subscriptionForm"
-                    type="org.apache.struts.webapp.example.SubscriptionForm"/>
+		<!-- Subscription form bean -->
+		<form-bean name="subscriptionForm"
+			type="org.apache.struts.webapp.example.SubscriptionForm" />
 
-  </form-beans>
-
-
-  <!-- ========== Global Forward Definitions ============================== -->
-  <global-forwards>
-    <forward   name="logoff"               path="/logoff.do"/>
-    <forward   name="logon"                path="/logon.do"/>
-    <forward   name="success"              path="/mainMenu.do"/>
-    <forward   name="welcome"              path="/welcome.do"/>
-  </global-forwards>
+	</form-beans>
 
 
-  <!-- ========== Action Mapping Definitions ============================== -->
-  <action-mappings>
-
-      <!-- Display welcome page -->
-      <action    path="/welcome"
-                 type="org.apache.struts.actions.ForwardAction"
-                 parameter="/welcome.jsp"/>
-
-      <!-- Display registration page -->
-      <action    path="/registration"
-                 forward="/registration.jsp"/>
-
-      <!-- Display logon page -->
-      <action    path="/mainMenu"
-                 forward="/mainMenu.jsp"/>
-
-      <!-- Display logon page -->
-      <action    path="/logon"
-                 forward="/logon.jsp"/>
-
-       <!-- Process a user logon -->
-       <action    path="/submitLogon"
-                  type="org.apache.struts.webapp.example.LogonAction"
-                  name="logonForm"
-                 scope="session"
-                 input="logon">
-         <exception
-                   key="expired.password"
-                  type="org.apache.struts.webapp.example.ExpiredPasswordException"
-                  path="/changePassword.jsp"/>
-       </action>
-
-      <!-- Process a user logoff -->
-       <action    path="/logoff"
-                  type="org.apache.struts.webapp.example.LogoffAction">
-         <forward name="success"              path="/welcome.do"/>
-       </action>
-
-      <!-- Edit mail subscription -->
-      <action    path="/editSubscription"
-                 type="org.apache.struts.webapp.example.EditSubscriptionAction"
-                 name="subscriptionForm"
-                scope="request"
-             validate="false">
-        <forward name="failure"              path="/mainMenu.do"/>
-        <forward name="success"              path="/subscription.jsp"/>
-      </action>
-
-       <!-- Save mail subscription -->
-       <action    path="/saveSubscription"
-                  type="org.apache.struts.webapp.example.SaveSubscriptionAction"
-                  name="subscriptionForm"
-                 scope="request"
-                 input="subscription">
-         <forward name="subscription"    path="/subscription.jsp"/>
-         <forward name="success"         path="/editRegistration.do?action=Edit"/>
-       </action>
-
-      <!-- Display the "walking tour" documentation -->
-      <action    path="/tour"
-              forward="/tour.htm">
-      </action>
-
-  </action-mappings>
-
-  <!-- ========== Controller Configuration ================================ -->
-
-  <controller pagePattern="$M$P" inputForward="true" />
-    <!-- pagePattern: use this pattern when creating URIs to resources.
-        $M=module, $P=path -->
-    <!-- inputForward: The "input" parameter on "action" elements is the name of a
-         local or global "forward" rather than a module-relative path -->
+	<!-- ========== Global Forward Definitions ============================== -->
+	<global-forwards>
+		<forward name="logoff" path="/logoff.do" />
+		<forward name="logon" path="/logon.do" />
+		<forward name="success" path="/mainMenu.do" />
+		<forward name="welcome" path="/welcome.do" />
+	</global-forwards>
 
 
-  <!-- ========== Message Resources Definitions =========================== -->
+	<!-- ========== Action Mapping Definitions ============================== -->
+	<action-mappings>
 
-  <message-resources
-    parameter="org.apache.struts.webapp.example.ApplicationResources"/>
+		<!-- Display welcome page -->
+		<action path="/welcome" type="org.apache.struts.actions.ForwardAction"
+			parameter="/welcome.jsp" />
 
-  <message-resources
-    parameter="org.apache.struts.webapp.example.AlternateApplicationResources"
-    key="alternate">
-  </message-resources>
+		<!-- Display registration page -->
+		<action path="/registration" forward="/registration.jsp" />
+
+		<!-- Display logon page -->
+		<action path="/mainMenu" forward="/mainMenu.jsp" />
+
+		<!-- Display logon page -->
+		<action path="/logon" forward="/logon.jsp" />
+
+		<!-- Process a user logon -->
+		<action path="/submitLogon" type="org.apache.struts.webapp.example.LogonAction"
+			name="logonForm" scope="session" input="logon">
+			<exception key="expired.password"
+				type="org.apache.struts.webapp.example.ExpiredPasswordException"
+				path="/changePassword.jsp" />
+		</action>
+
+		<!-- Process a user logoff -->
+		<action path="/logoff" type="org.apache.struts.webapp.example.LogoffAction">
+			<forward name="success" path="/welcome.do" />
+		</action>
+
+		<!-- Edit mail subscription -->
+		<action path="/editSubscription"
+			type="org.apache.struts.webapp.example.EditSubscriptionAction" name="subscriptionForm"
+			scope="request" validate="false">
+			<forward name="failure" path="/mainMenu.do" />
+			<forward name="success" path="/subscription.jsp" />
+		</action>
+
+		<!-- Save mail subscription -->
+		<action path="/saveSubscription"
+			type="org.apache.struts.webapp.example.SaveSubscriptionAction" name="subscriptionForm"
+			scope="request" input="subscription">
+			<forward name="subscription" path="/subscription.jsp" />
+			<forward name="success" path="/editRegistration.do?action=Edit" />
+		</action>
+
+		<!-- Display the "walking tour" documentation -->
+		<action path="/tour" forward="/tour.htm">
+		</action>
+
+	</action-mappings>
+
+	<!-- ========== Controller Configuration ================================ -->
+
+	<controller pagePattern="$M$P" inputForward="true" />
+	<!-- pagePattern: use this pattern when creating URIs to resources. $M=module, 
+		$P=path -->
+	<!-- inputForward: The "input" parameter on "action" elements is the name 
+		of a local or global "forward" rather than a module-relative path -->
 
 
-  <!-- ========== Plug Ins Configuration ================================== -->
+	<!-- ========== Message Resources Definitions =========================== -->
 
-  <plug-in className="org.apache.struts.plugins.ModuleConfigVerifier"/>
+	<message-resources
+		parameter="org.apache.struts.webapp.example.ApplicationResources" />
 
-  <plug-in className="org.apache.struts.webapp.example.memory.MemoryDatabasePlugIn">
-    <set-property property="pathname" value="/WEB-INF/database.xml"/>
-  </plug-in>
+	<message-resources
+		parameter="org.apache.struts.webapp.example.AlternateApplicationResources"
+		key="alternate">
+	</message-resources>
 
-  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
-    <set-property property="pathnames"
-                     value="/WEB-INF/validator-rules.xml,
-                            /WEB-INF/validation.xml"/>
-  </plug-in>
 
-  <plug-in className="org.apache.struts.plugins.DigestingPlugIn">
-    <set-property property="key" value="serverTypes"/>
-    <set-property property="configPath" value="/WEB-INF/server-types.xml"/>
-    <set-property property="digesterPath" value="/WEB-INF/lvb-digester-rules.xml"/>
-  </plug-in>
+	<!-- ========== Plug Ins Configuration ================================== -->
+
+	<plug-in className="org.apache.struts.plugins.ModuleConfigVerifier" />
+
+	<plug-in className="org.apache.struts.webapp.example.memory.MemoryDatabasePlugIn">
+		<set-property property="pathname" value="/WEB-INF/database.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,
+                            /WEB-INF/validation.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.plugins.DigestingPlugIn">
+		<set-property property="key" value="serverTypes" />
+		<set-property property="configPath" value="/WEB-INF/server-types.xml" />
+		<set-property property="digesterPath" value="/WEB-INF/lvb-digester-rules.xml" />
+	</plug-in>
 
 </struts-config>
