@@ -1,4 +1,4 @@
-package com.ofs.horscope;
+package com.ofs.response;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionError;

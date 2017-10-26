@@ -2,16 +2,16 @@
 <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
 <struts-config>
 	<form-beans>
-		<form-bean name="SigninForm" type="matrimony.com.SigninForm" />
-		<form-bean name="ForgotForm" type="matrimony.com.ForgotForm" />
-		<form-bean name="RegisterForm" type="matrimony.com.RegisterForm" />
+		<form-bean name="SigninForm" type="com.ofs.profile.SigninForm" />
+		<form-bean name="ForgotForm" type="com.ofs.profile.ForgotForm" />
+		<form-bean name="RegisterForm" type="com.ofs.profile.RegisterForm" />
 		<form-bean name="SecureForm" type="matrimony.com.SecureForm" />
-		<form-bean name="OpenHoldForm" type="matrimony.com.OpenHoldForm" />
-		<form-bean name="PartnerPreferenceForm" type="matrimony.com.PartnerPreferenceForm" />
-		<form-bean name="ChangePasswordForm" type="matrimony.com.ChangePasswordForm" />
-		<form-bean name="ResponseForm" type="matrimony.com.ResponseForm" />
-		<form-bean name="MessageForm" type="matrimony.com.MessageForm" />
-		<form-bean name="HoroscopeForm" type="matrimony.com.HoroscopeForm" />
+		<form-bean name="OpenHoldForm" type="com.ofs.response.OpenHoldForm" />
+		<form-bean name="PartnerPreferenceForm" type="com.ofs.horscope.PartnerPreferenceForm" />
+		<form-bean name="ChangePasswordForm" type="com.ofs.profile.ChangePasswordForm" />
+		<form-bean name="ResponseForm" type="com.ofs.response.ResponseForm" />
+		<form-bean name="MessageForm" type="com.ofs.response.MessageForm" />
+		<form-bean name="HoroscopeForm" type="com.ofs.horscope.HoroscopeForm" />
 		<form-bean name="SearchForm" type="matrimony.com.SearchForm" />
 	</form-beans>
 	<global-exceptions>
@@ -26,46 +26,46 @@
 		<forward name="creditcard" path="/SecureProfile.do" />
 	</global-forwards>
 	<action-mappings>
-		<action path="/Signin" type="matrimony.com.SigninAction" input="/Pages/index.jsp"
+		<action path="/Signin" type="com.ofs.profile.SigninAction" input="/Pages/index.jsp"
 			name="SigninForm" scope="request" validate="true">
 			<forward name="success" path="/Pages/PhotoUpload.jsp" />
 		</action>
-		<action path="/ForgotPassword" type="matrimony.com.ForgotAction"
+		<action path="/ForgotPassword" type="com.ofs.profile.ForgotAction"
 			input="/Pages/ForgotPassword.jsp" name="ForgotForm" scope="request"
 			validate="true">
 			<forward name="password" path="/Pages/GetPassword.jsp" />
 		</action>
-		<action path="/RegisterCustomer" type="matrimony.com.RegisterAction"
+		<action path="/RegisterCustomer" type="com.ofs.profile.RegisterAction"
 			input="/Pages/Register.jsp" name="RegisterForm" scope="request"
 			validate="true">
 			<forward name="success" path="/Pages/PhotoUpload.jsp" />
 		</action>
 		<action path="/SecureProfile" type="matrimony.com.SecureProfile"
 			scope="request" name="SecureForm" validate="false" />
-		<action path="/OpenHold" type="matrimony.com.OpenHold" input="/Pages/ProfileManagement.jsp"
+		<action path="/OpenHold" type="com..ofs.response/OpenHold" input="/Pages/ProfileManagement.jsp"
 			name="OpenHoldForm" scope="request" validate="true">
 			<forward name="success" path="/Pages/PhotoUpload.jsp" />
 		</action>
-		<action path="/PartnerSpecification" type="matrimony.com.PartnerPreference"
+		<action path="/PartnerSpecification" type="com.ofs.horscope.PartnerPreference"
 			input="/Pages/Lookingfor.jsp" name="PartnerPreferenceForm" scope="request"
 			validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>
-		<action path="/RenamePassword" type="matrimony.com.ChangePassword"
+		<action path="/RenamePassword" type="com.ofs.profile.ChangePassword"
 			input="/Pages/ChangePassword.jsp" name="ChangePasswordForm" scope="request"
 			validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>
-		<action path="/AddResponse" type="matrimony.com.Response"
+		<action path="/AddResponse" type="com.ofs.response.Response"
 			input="/Pages/AddResponse.jsp" name="ResponseForm" scope="request"
 			validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>
-		<action path="/SendMessage" type="matrimony.com.Message" input="/Pages/ForwardMessage.jsp"
+		<action path="/SendMessage" type="com.ofs.response.Message" input="/Pages/ForwardMessage.jsp"
 			name="MessageForm" scope="request" validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>
-		<action path="/BestMatch" type="matrimony.com.Horoscope" input="/Pages/BestMatch.jsp"
+		<action path="/BestMatch" type="com.ofs.horscope.Horoscope" input="/Pages/BestMatch.jsp"
 			name="HoroscopeForm" scope="request" validate="true">
 			<forward name="success" path="/Pages/Information.jsp" />
 		</action>

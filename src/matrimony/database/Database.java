@@ -2,6 +2,8 @@ package matrimony.database;
 import java.net.URL;
 import java.util.Vector;
 import java.io.*;
+import java.io.IOException;
+import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -69,17 +71,31 @@ import java.sql.*;
 				return db;
 		}
 		
-		public Connection getConnection() throws Exception {
+		public Connection getConnection() throws IOException {
 				nl = doc.getElementsByTagName("mysql");
 				nl=nl.item(0).getChildNodes();
 				System.out.println(nl.item(1).getFirstChild().getNodeValue());
-				Class.forName(nl.item(1).getFirstChild().getNodeValue());
+				try {
+					Class.forName(nl.item(1).getFirstChild().getNodeValue());
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (DOMException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				System.out.println("\n\n"+nl.item(1).getFirstChild().getNodeValue());
 				String urlstring=nl.item(3).getFirstChild().getNodeValue()+"/";
 				urlstring+=nl.item(5).getFirstChild().getNodeValue();
 				urlstring+="?user="+nl.item(7).getFirstChild().getNodeValue();
 				urlstring+="&password="+nl.item(9).getFirstChild().getNodeValue();
-				return DriverManager.getConnection(urlstring);
+				try {
+					return DriverManager.getConnection(urlstring);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return null;
 		}
 		
 		public int resolveType(Object obj) {

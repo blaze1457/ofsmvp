@@ -5,6 +5,7 @@ import javax.servlet.http.*;
 import org.apache.struts.action.*;
 import matrimony.database.Database;
 import java.util.Vector;
+
 public class  RegisterAction extends Action {
 	private Database db=null;
 	private String PASSWORD;
