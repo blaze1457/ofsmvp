@@ -22,7 +22,7 @@ public class  ChangePassword extends Action {
 									request.setAttribute("Exception","Invalid Session. You aren't Loggged on");
 									return mapping.findForward("home");
 				}
-				vec=db.getValues("Matrimony_Customer_Info",new String[] {"Password"},"profile_id='"+client.toString()+"'");
+				vec=db.getValues("matrimony.Matrimony_Customer_Info",new String[] {"Password"},"profile_id='"+client.toString()+"'");
 				String oldpassword=vec.elementAt(0).toString();
 				if(!cpf.getOldpassword().equals(oldpassword)) {
 									request.setAttribute("Exception","Please Check The Existing Password Once Again.");
@@ -31,7 +31,7 @@ public class  ChangePassword extends Action {
 				Object[][] value={
 									{"Password",cpf.getConfirmpassword()}
 								 };
-				exec=db.updateRecord("Matrimony_Customer_Info",value,"Profile_Id='"+client.toString()+"'");
+				exec=db.updateRecord("matrimony.Matrimony_Customer_Info",value,"Profile_Id='"+client.toString()+"'");
 				if(exec) {
 					request.setAttribute("Information","<BR><center><h4>Your Password has been Changed Successfully. Please Logout to Check It</h4></center><BR>");
 					return mapping.findForward("success");

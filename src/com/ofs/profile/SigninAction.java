@@ -14,7 +14,7 @@ public class SigninAction  extends Action {
 			SigninForm sf=(SigninForm) form;
 			session=request.getSession(true);
 			db=Database.newInstance(request,response);
-			table="Matrimony_Customer_Info";
+			table="matrimony.Matrimony_Customer_Info";
 			condition="Profile_Id='"+sf.getProfileid()+"' or Email_Id='"+sf.getProfileid()+"' and Password='"+sf.getPassword()+"'";
 			//db.getValues(table,new String[] {"Name"},condition)[0].toString();
 			Vector obj=db.getValues(table,new String[] {"Profile_Id","Name","Gender","Email_Id"},condition);

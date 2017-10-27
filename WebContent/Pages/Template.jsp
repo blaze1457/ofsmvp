@@ -9,7 +9,7 @@
 		public String[] years={"1900","2006"};
 	    public String[] ages={"18","61"};
 	    public String[] marstatus={"Unmarried","Widow-Widower","Divorce","Separated"};
-	    public String[] languages={"Telugu","English","Hindi","Urdu","Kannada","Tamil","Malayalam","Oriya","Marathi","Bengali","Assamese","Rajasthani","Manipuri","Others"};
+	    public String[] languages={"Tamil","English","Hindi","Urdu","Kannada","Telugu","Malayalam","Oriya","Marathi","Bengali","Assamese","Rajasthani","Manipuri","Others"};
 		public String[] hrs={"00-AM","01-AM","02-AM","03-AM","04-AM","05-AM","06-AM","07-AM","08-AM","09-AM","10-AM","11-AM","00-PM","01-PM","02-PM","03-PM","04-PM","05-PM","06-PM","07-PM","08-PM","09-PM","10-PM","11-PM"};
 		public String[] hours={"1","13"};
 	    public String[] mins={"0","60"};
@@ -41,7 +41,7 @@
 					this.templatejs=getPath("/Scripts/Template.js");
  				    this.itemsjs=getPath("/Scripts/Items.js");
 					this.toplogo=getPath("/Images/wedding.jpg");
-					this.watermark=getPath("/Images/pallaki.jpg");
+					//this.watermark=getPath("/Images/pallaki.jpg");
 					this.horoscope=getPath("/Images/horoscope.gif");
 					this.couple=getPath("/Images/horoscope.couple.jpg");
 				    this.httpresponse.setHeader("Cahce-Control","no-cache");

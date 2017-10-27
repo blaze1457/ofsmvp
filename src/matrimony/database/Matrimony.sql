@@ -66,7 +66,7 @@ End_date		date	    NOT NULL,
 ALTER TABLE `Matrimony_profile_management`
 ADD FOREIGN KEY `matrimony`.`Matrimony_profile_managemen`(Profile_Id) REFERENCES matrimony_customer_info (Profile_Id) ON DELETE CASCADE;
 
-Create table `matrimony`.`Matrimony_Partner_Specification` (
+create table `matrimony`.`Matrimony_Partner_Specification` (
 Profile_Id		varchar(10)	not null,
 Email_Id		varchar(50)     not null,
 Details			varchar(500)	not null,

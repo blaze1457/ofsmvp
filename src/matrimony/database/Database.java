@@ -61,7 +61,7 @@ import org.xml.sax.SAXException;
 				private ResultSetMetaData rsmd=null;
 
 		private Database(HttpServletRequest request,HttpServletResponse response) throws IOException {
-				this.xml = request.getContextPath()+"/database/database.xml";
+				this.xml = request.getContextPath()+"WebContent/WEB-INF/database.xml";
 				this.request = request;	
 				this.response = response;
 				this.session = this.request.getSession(true);

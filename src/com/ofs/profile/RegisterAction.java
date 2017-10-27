@@ -47,7 +47,7 @@ public class  RegisterAction extends Action {
 								 rf.getStatus(),rf.getNoofchildren(),rf.getChildrenlivingstatus(),rf.getReligion(),rf.getCountry(),rf.getCitizenship(),rf.getResident(),rf.getEmployment(),
 								 rf.getEmail(),PASSWORD
 								};
-				exec=db.insertRecord("Matrimony_Customer_Info",value);
+				exec=db.insertRecord("matrimony.Matrimony_Customer_Info",value);
 				if(exec) {
 					session.setAttribute("Client",value[0]);
 					session.setAttribute("Name",rf.getUsername());

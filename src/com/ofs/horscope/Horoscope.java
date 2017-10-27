@@ -32,7 +32,7 @@ public class  Horoscope extends Action {
 								hf.getEmailid(),
 								hf.getMatch(),
 								};
-				exec=db.insertRecord("Matrimony_Horoscope",value);
+				exec=db.insertRecord("matrimony.Matrimony_Horoscope",value);
 				if(exec) {
 					request.setAttribute("Information","<BR><center><h4>Your Details has been Received. <BR>We Will send the result with in 3 or 4 working days to Your E-mail.</h4></center><BR>");
 					return mapping.findForward("success");

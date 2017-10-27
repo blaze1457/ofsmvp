@@ -26,27 +26,27 @@ public class  Search extends Action {
 				String condition1="profile_id='"+sf.getProfileid()+"' or email_id='"+sf.getProfileid()+"'";
 				String condition2="profile_id='"+sf.getProfileid()+"'";
 				StringBuffer result=new StringBuffer();
-				if(!db.checkRecord("Matrimony_Customer_Info",condition1)) {
+				if(!db.checkRecord("matrimony.Matrimony_Customer_Info",condition1)) {
 					request.setAttribute("Result",searchform+"<BR><center><H4>Sorry! the Specified Customer Not Found. Please Try again</h4></center><br>");
 					return mapping.findForward("results");
 				}
 				result.append("<fieldset><legend>Profile</legend><center><a href='javascript:viewPhoto(\"./Pages/ShowProfile.jsp?"+sf.getProfileid()+"\")'>View Profile</a><BR><BR>");	
-				result.append(db.fetchRecords("Matrimony_Customer_Info",profile,condition1,600,1,false));
+				result.append(db.fetchRecords("matrimony.Matrimony_Customer_Info",profile,condition1,600,1,false));
 				result.append("<BR></fieldset>");
 				result.append("<fieldset><legend>Personal Info</legend><BR>");	
-				result.append(db.fetchRecords("Matrimony_Customer_Info",personal,condition1,600,1,false));
+				result.append(db.fetchRecords("matrimony.Matrimony_Customer_Info",personal,condition1,600,1,false));
 				result.append("<BR></fieldset>");
 				result.append("<fieldset><legend>Contact and Status Info</legend><BR>");	
-				result.append(db.fetchRecords("Matrimony_Customer_Info",contact,condition1,600,1,false));
+				result.append(db.fetchRecords("matrimony.Matrimony_Customer_Info",contact,condition1,600,1,false));
 				result.append("<BR></fieldset>");
 				result.append("<fieldset><legend>Background</legend><BR>");	
-				result.append(db.fetchRecords("Matrimony_Partner_Specification",background,condition2,600,1,false));
+				result.append(db.fetchRecords("matrimony.Matrimony_Partner_Specification",background,condition2,600,1,false));
 				result.append("<BR></fieldset>");
 				result.append("<fieldset><legend>Looking For</legend><BR>");	
-				result.append(db.fetchRecords("Matrimony_Partner_Specification",lookfor,condition2,600,1,false));
+				result.append(db.fetchRecords("matrimony.Matrimony_Partner_Specification",lookfor,condition2,600,1,false));
 				result.append("<BR></fieldset>");
 				result.append("<fieldset><legend>Conclusion</legend><BR>");	
-				result.append(db.fetchRecords("Matrimony_Partner_Specification",conclusion,condition2,600,1,false));
+				result.append(db.fetchRecords("matrimony.Matrimony_Partner_Specification",conclusion,condition2,600,1,false));
 				result.append("<BR></fieldset>");
 				request.setAttribute("Result",searchform+result.toString());
 				return mapping.findForward("results");

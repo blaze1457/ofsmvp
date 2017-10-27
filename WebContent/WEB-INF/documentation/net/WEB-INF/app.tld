@@ -12,190 +12,179 @@
 
 
 
-	<tlibversion>1.0</tlibversion>
+  <tlibversion>1.0</tlibversion>
 
-	<jspversion>1.1</jspversion>
+  <jspversion>1.1</jspversion>
 
-	<shortname>Application Tag Library</shortname>
+  <shortname>Application Tag Library</shortname>
 
-	<uri>http://jakarta.apache.org/taglibs/struts-example-1.0</uri>
+  <uri>http://jakarta.apache.org/taglibs/struts-example-1.0</uri>
 
-	<info>
+  <info>
 
-		This tag library contains functionality specific to the Struts
+    This tag library contains functionality specific to the Struts
 
-		Example Application.
+    Example Application.
 
-	</info>
+  </info>
 
 
 
 
 
-	<tag>
+  <tag>
 
-		<name>checkLogon</name>
+    <name>checkLogon</name>
 
-		<tagclass>org.apache.struts.webapp.example.CheckLogonTag</tagclass>
+    <tagclass>org.apache.struts.webapp.example.CheckLogonTag</tagclass>
 
-		<bodycontent>empty</bodycontent>
+    <bodycontent>empty</bodycontent>
 
-		<info>
+    <info>
 
-			Validate that there is a currently logged on user, by checking
-			for
+      Validate that there is a currently logged on user, by checking for
 
-			the existence of a session-scope bean under the specified name.
+      the existence of a session-scope bean under the specified name.
 
-			If
-			there is no such bean, forward control to the specified page,
+      If there is no such bean, forward control to the specified page,
 
-			which
-			will typically be a logon form.
+      which will typically be a logon form.
 
 
 
-			name - Name of the session-scope bean
-			to check for [user]
+      name - Name of the session-scope bean to check for [user]
 
 
 
-			page - Context-relative path to the logon page
-			[/logon.jsp]
+      page - Context-relative path to the logon page [/logon.jsp]
 
-		</info>
+    </info>
 
-		<attribute>
+    <attribute>
 
-			<name>name</name>
+      <name>name</name>
 
-			<required>false</required>
+      <required>false</required>
 
-			<rtexprvalue>true</rtexprvalue>
+      <rtexprvalue>true</rtexprvalue>
 
-		</attribute>
+    </attribute>
 
-		<attribute>
+    <attribute>
 
-			<name>page</name>
+      <name>page</name>
 
-			<required>false</required>
+      <required>false</required>
 
-			<rtexprvalue>true</rtexprvalue>
+      <rtexprvalue>true</rtexprvalue>
 
-		</attribute>
+    </attribute>
 
-	</tag>
+  </tag>
 
 
 
 
 
-	<tag>
+  <tag>
 
-		<name>linkSubscription</name>
+    <name>linkSubscription</name>
 
-		<tagclass>org.apache.struts.webapp.example.LinkSubscriptionTag</tagclass>
+    <tagclass>org.apache.struts.webapp.example.LinkSubscriptionTag</tagclass>
 
-		<info>
+    <info>
 
-			Generate a URL-encoded hyperlink to the a URL made up of the
+      Generate a URL-encoded hyperlink to the a URL made up of the
 
-			specified base value, plus optional query parameters that
+      specified base value, plus optional query parameters that
 
-			select the
-			specified Subscription object.
+      select the specified Subscription object.
 
 
 
-			name - Name of the attribute containing
-			the specified
+      name     - Name of the attribute containing the specified
 
-			Subscription. [subscription]
+                 Subscription.  [subscription]
 
 
 
-			page - Context-relative URL
-			of the generated link
+      page     - Context-relative URL of the generated link
 
-		</info>
+    </info>
 
-		<attribute>
+    <attribute>
 
-			<name>name</name>
+      <name>name</name>
 
-			<required>false</required>
+      <required>false</required>
 
-			<rtexprvalue>true</rtexprvalue>
+      <rtexprvalue>true</rtexprvalue>
 
-		</attribute>
+    </attribute>
 
-		<attribute>
+    <attribute>
 
-			<name>page</name>
+      <name>page</name>
 
-			<required>true</required>
+      <required>true</required>
 
-			<rtexprvalue>true</rtexprvalue>
+      <rtexprvalue>true</rtexprvalue>
 
-		</attribute>
+    </attribute>
 
-	</tag>
+  </tag>
 
 
 
 
 
-	<tag>
+  <tag>
 
-		<name>linkUser</name>
+    <name>linkUser</name>
 
-		<tagclass>org.apache.struts.webapp.example.LinkUserTag</tagclass>
+    <tagclass>org.apache.struts.webapp.example.LinkUserTag</tagclass>
 
-		<info>
+    <info>
 
-			Generate a URL-encoded hyperlink to the a URL made up of the
+      Generate a URL-encoded hyperlink to the a URL made up of the
 
-			specified base value, plus optional query parameters that
+      specified base value, plus optional query parameters that
 
-			select the
-			specified User object.
+      select the specified User object.
 
 
 
-			name - Name of the attribute containing the
-			specified user.
+      name     - Name of the attribute containing the specified user.
 
-			[user]
+                 [user]
 
 
 
-			href - Context-relative URL of the generated
-			link
+      href     - Context-relative URL of the generated link
 
-		</info>
+    </info>
 
-		<attribute>
+    <attribute>
 
-			<name>name</name>
+      <name>name</name>
 
-			<required>false</required>
+      <required>false</required>
 
-			<rtexprvalue>true</rtexprvalue>
+      <rtexprvalue>true</rtexprvalue>
 
-		</attribute>
+    </attribute>
 
-		<attribute>
+    <attribute>
 
-			<name>page</name>
+      <name>page</name>
 
-			<required>true</required>
+      <required>true</required>
 
-			<rtexprvalue>true</rtexprvalue>
+      <rtexprvalue>true</rtexprvalue>
 
-		</attribute>
+    </attribute>
 
-	</tag>
+  </tag>
 
 
 

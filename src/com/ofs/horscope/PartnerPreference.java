@@ -46,7 +46,7 @@ public class  PartnerPreference extends Action {
 								ppf.getResidentstatus(),
 								ppf.getConclusion()
 								};
-				exec=db.insertRecord("Matrimony_Partner_Specification",value);
+				exec=db.insertRecord("matrimony.Matrimony_Partner_Specification",value);
 				cn.commit();
 				if(exec) {
 					request.setAttribute("Information","<BR><center><h4>Your Partner Specification has been Saved <BR> Your information will be added to Profiles Search.</h4></center><BR>");

@@ -4,15 +4,15 @@
           "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN"
           "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
 <form-validation>
-	<formset>
-		<form name="SigninForm">
-			<field property="profileid" depends="required">
-				<arg0 key="matrimony.profileid" />
-			</field>
-			<field property="password" depends="required,maxlength,mask">
-				<msg name="mask" key="matrimony.format" />
-				<arg0 key="matrimony.password" />
-				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+ <formset>             
+	<form name="SigninForm">
+		  <field property="profileid" depends="required">
+				<arg0 key="matrimony.profileid"/>
+		  </field> 
+		  <field property="password" depends="required,maxlength,mask">
+				<msg name="mask" key="matrimony.format"/>
+				<arg0 key="matrimony.password"/>
+				<arg1  name="maxlength" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
 					<var-value>20</var-value>
@@ -21,18 +21,18 @@
 					<var-name>mask</var-name>
 					<var-value>^[a-zA-z0-9]*$</var-value>
 				</var>
-			</field>
-		</form>
-		<form name="ForgotForm">
-			<field property="emailid" depends="required,mask">
-				<msg name="mask" key="matrimony.email.format" />
-				<arg0 key="matrimony.emailid" />
+		  </field>
+		  </form>         
+ 	  	  <form name="ForgotForm">
+		  <field property="emailid" depends="required,mask">
+				<msg name="mask" key="matrimony.email.format"/>
+				<arg0 key="matrimony.emailid"/>
 				<var>
 					<var-name>mask</var-name>
-					<!--^[a-z0-9]([a-z0-9_\-\.]*)@([a-z0-9_\-\.]*)(\.[a-z]{2,3}(\.[a-z]{2}){0,2})$/i -->
+					<!--^[a-z0-9]([a-z0-9_\-\.]*)@([a-z0-9_\-\.]*)(\.[a-z]{2,3}(\.[a-z]{2}){0,2})$/i-->
 					<var-value>^\S*$</var-value>
 				</var>
-			</field>
+		  </field> 
 		</form>
-	</formset>
+</formset>   
 </form-validation>
