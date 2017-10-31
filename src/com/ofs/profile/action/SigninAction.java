@@ -1,7 +1,10 @@
-package com.ofs.profile;
+package com.ofs.profile.action;
 import java.util.Vector;
 import javax.servlet.http.*;
 import org.apache.struts.action.*;
+
+import com.ofs.profile.form.SigninForm;
+
 import matrimony.database.Database;
 public class SigninAction  extends Action {
 	private Database db=null;

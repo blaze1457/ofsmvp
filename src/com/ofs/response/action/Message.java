@@ -1,8 +1,11 @@
-package com.ofs.response;
+package com.ofs.response.action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionMapping;
+
+import com.ofs.response.form.MessageForm;
+
 import javax.servlet.http.*;
 import matrimony.database.Database;
 public class  Message extends Action {

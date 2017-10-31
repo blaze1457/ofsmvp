@@ -1,8 +1,11 @@
-package com.ofs.horscope;
+package com.ofs.horscope.action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionMapping;
+
+import com.ofs.horscope.form.PartnerPreferenceForm;
+
 import javax.servlet.http.*;
 import matrimony.database.Database;
 import java.sql.Connection;

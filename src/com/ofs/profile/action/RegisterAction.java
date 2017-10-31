@@ -1,8 +1,11 @@
-package com.ofs.profile;
+package com.ofs.profile.action;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import org.apache.struts.action.*;
+
+import com.ofs.profile.form.RegisterForm;
+
 import matrimony.database.Database;
 import java.util.Vector;
 
@@ -42,9 +45,9 @@ public class  RegisterAction extends Action {
 	  	    /****************************Perform Transaction*************************/
 		  
 				Object[] value={
-								"C"+rf.getProfileid(),rf.getUsername(),rf.getAge(),rf.getYear()+"-"+rf.getMonth()+"-"+rf.getDay(),rf.getHrs()+":"+rf.getMins()+"-"+rf.getMeridian(),rf.getPob(),rf.getGender(),rf.getHeight()+"-"+rf.getIcf(),rf.getWeight()+"-"+rf.getKp(),
- 								 rf.getMothertongue(),rf.getPhysicalstatus(),rf.getCaste(),rf.getSubcaste(),rf.getGotram(),rf.getStar(),rf.getSunsign(),rf.getKujadosham(),rf.getEatinghabits(),rf.getEducation(),rf.getOccupation(),rf.getAnnualincome(),rf.getCity(),rf.getState(),rf.getPhoneno(),rf.getRegdby(),rf.getRefby(),
-								 rf.getStatus(),rf.getNoofchildren(),rf.getChildrenlivingstatus(),rf.getReligion(),rf.getCountry(),rf.getCitizenship(),rf.getResident(),rf.getEmployment(),
+								"C"+rf.getProfileid(),rf.getUsername(),rf.getAge(),rf.getyear()+"-"+rf.getmonth()+"-"+rf.getDay(),rf.getPob(),rf.getGender(),
+ 								 rf.getMothertongue(),rf.getCaste(),rf.getEducation(),rf.getOccupation(),rf.getAnnualincome(),rf.getCity(),rf.getState(),rf.getPhoneno(),
+								 rf.getStatus(),rf.getReligion(),rf.getCountry(),rf.getCitizenship(),rf.getResident(),rf.getEmployment(),
 								 rf.getEmail(),PASSWORD
 								};
 				exec=db.insertRecord("matrimony.Matrimony_Customer_Info",value);

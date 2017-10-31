@@ -1,4 +1,4 @@
-package matrimony.com;
+package com.ofs.seacrh.action;
 import javax.servlet.http.*;
 import org.apache.struts.action.*;
 import org.apache.struts.util.LabelValueBean;

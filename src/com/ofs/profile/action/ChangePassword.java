@@ -1,8 +1,11 @@
-package com.ofs.profile;
+package com.ofs.profile.action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionMapping;
+
+import com.ofs.profile.form.ChangePasswordForm;
+
 import javax.servlet.http.*;
 import java.util.Vector;
 import matrimony.database.Database;

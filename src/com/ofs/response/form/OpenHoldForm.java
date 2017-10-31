@@ -1,4 +1,4 @@
-package com.ofs.response;
+package com.ofs.response.form;
 import org.apache.struts.validator.ValidatorForm;
 public class OpenHoldForm extends ValidatorForm implements java.io.Serializable {
 	String profileid,mstype,cardtype,cardno;

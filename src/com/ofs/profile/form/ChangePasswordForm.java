@@ -1,4 +1,4 @@
-package com.ofs.profile;
+package com.ofs.profile.form;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionError;

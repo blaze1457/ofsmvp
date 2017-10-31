@@ -1,8 +1,10 @@
-package matrimony.com;
+package com.ofs.seacrh.action;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import org.apache.struts.action.*;
+
+import matrimony.com.SearchForm;
 import matrimony.database.Database;
 import java.sql.*;
 import java.util.Vector;

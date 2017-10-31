@@ -1,4 +1,4 @@
-package com.ofs.profile;
+package com.ofs.profile.form;
 import org.apache.struts.validator.ValidatorForm;
 public class RegisterForm extends ValidatorForm {
 	String profileid;
@@ -6,36 +6,18 @@ public class RegisterForm extends ValidatorForm {
 	String age;
 	String year;
 	String month;
-	String day;
-	String hrs;
-	String mins;
-	String meridian;
+	String Day;
 	String pob;
 	String gender;
-	String height;
-	String icf;
-	String weight;
-	String kp;
 	String mothertongue;
-	String physicalstatus;
 	String caste;
-	String subcaste;
-	String gotram;
-	String star;
-	String sunsign;
-	String kujadosham;
-	String eatinghabits;
 	String education;
 	String occupation;
 	String annualincome;
 	String city;
 	String state;
 	String phoneno;
-	String regdby;
-	String refby;
 	String status;
-	String noofchildren;
-	String childrenlivingstatus;
 	String religion;
 	String country;
 	String citizenship;
@@ -54,23 +36,14 @@ public class RegisterForm extends ValidatorForm {
 	public void setAge(String age) {
 		this.age=age;
 	}
-	public void setYear(String year) {
+	public void setyear(String year) {
 		this.year=year;
 	}
-	public void setMonth(String month) {
-		this.month=month;
+	public void setmonth(String month) {
+		this.year=month;
 	}
-	public void setDay(String day) {
-		this.day=day;
-	}
-	public void setHrs(String hrs) {
-		this.hrs=hrs;
-	}
-	public void setMins(String mins) {
-		this.mins=mins;
-	}
-	public void setMeridian(String meridian) {
-		this.meridian=meridian;
+	public void setDay(String Day) {
+		this.year=Day;
 	}
 	public void setPob(String pob) {
 		this.pob=pob;
@@ -78,44 +51,11 @@ public class RegisterForm extends ValidatorForm {
 	public void setGender(String gender) {
 		this.gender=gender;
 	}
-	public void setHeight(String height) {
-		 this.height=height;
-	 }
-	public void setIcf(String icf) {
-		this.icf=icf; // ICF --> inches or cms or feet
-	}
-	public void setWeight(String weight) {
-		this.weight=weight;
-	}
-	public void setKp(String kp) {
-		this.kp=kp; // kp --> kilo or pounds
-	}
 	public void setMothertongue(String mothertongue) {
 		this.mothertongue=mothertongue;
 	}
-	public void setPhysicalstatus(String  physicalstatus) {
-		this.physicalstatus=physicalstatus;
-	}
 	public void setCaste(String caste) { 
 		this.caste=caste;
-	}
-	public void setSubcaste(String subcaste) {
-		this.subcaste=subcaste;
-	}
-	public void setGotram(String gotram) {
-		this.gotram=gotram;
-	} 
-	public void setStar(String  star) {
-		this.star=star;
-	} 
-	public void setSunsign(String  sunsign) {
-		this.sunsign=sunsign;		
-	} 
-	public void setKujadosham(String kujadosham) {
-		this.kujadosham=kujadosham;
-	} 
-	public void setEatinghabits(String eatinghabits) {  
-		this.eatinghabits=eatinghabits;
 	}
 	public void setEducation(String education) {    
 		this.education=education;
@@ -135,20 +75,8 @@ public class RegisterForm extends ValidatorForm {
 	public void setPhoneno(String phoneno) {
 		this.phoneno=phoneno;
 	}
-	public void setRegdby(String  regdby) { 
-		this.regdby=regdby;
-	}
-	public void setRefby(String refby) {  
-		this.refby=refby;
-	}
 	public void setStatus(String  status) { 
 		this.status=status;
-	}
-	public void setNoofchildren(String noofchildren) { 
-		this.noofchildren=noofchildren;
-	 }
-	public void setChildrenlivingstatus(String childrenlivingstatus) { 
-		this.childrenlivingstatus=childrenlivingstatus;
 	}
 	public void setReligion(String  religion) {  
 		this.religion=religion;
@@ -186,23 +114,14 @@ public class RegisterForm extends ValidatorForm {
 	public String getAge(){ 
 		return age;
 	}
-	public String getYear() {
+	public String getyear() {
 		return year;
 	}
-	public String getMonth() {
+	public String getmonth() {
 		return month;
 	}
 	public String getDay() {
-		return day;
-	}
-	public String getHrs() {
-		return hrs;
-	}
-	public String getMins() {
-		return mins;
-	}
-	public String getMeridian() {
-		return meridian;
+		return Day;
 	}
 	public String getPob() {
 		return pob;
@@ -210,44 +129,11 @@ public class RegisterForm extends ValidatorForm {
 	public String getGender(){ 
 		return   gender;
 	}
-	public String getHeight(){ 
-		return height;
-	}
-	public String getIcf(){ 
-		return   icf;
-	}
-	public String getWeight(){ 
-		return   weight;
-	}
-	public String getKp(){ 
-		return  kp;
-	}
 	public String getMothertongue(){ 
 		return   mothertongue;
 	}
-	public String getPhysicalstatus(){ 
-		return   physicalstatus;
-	}
 	public String getCaste(){
 		return   caste;
-	}
-	public String getSubcaste() {
-		return subcaste;
-	}
-	public String getGotram(){
-		return   gotram;
-	}
-	public String getStar(){ 
-		return   star;
-	}
-	public String getSunsign(){ 
-		return   sunsign;
-	}
-	public String getKujadosham(){
-		return   kujadosham;
-	}
-	public String getEatinghabits(){ 
-		return   eatinghabits;
 	}
 	public String getEducation(){ 
 		return   education;
@@ -267,20 +153,8 @@ public class RegisterForm extends ValidatorForm {
 	public String getPhoneno(){ 
 		return   phoneno;
 	}
-	public String getRegdby(){ 
-		return   regdby;
-	}
-	public String getRefby(){ 
-		return   refby;
-	}
 	public String getStatus(){ 
 		return   status;
-	}
-	public String getNoofchildren(){ 
-		return   noofchildren;
-	}
-	public String getChildrenlivingstatus(){
-		return   childrenlivingstatus;
 	}
 	public String getReligion(){ 
 		return   religion;

@@ -1,4 +1,4 @@
-package com.ofs.horscope;
+package com.ofs.horscope.form;
 import org.apache.struts.action.*;
 import javax.servlet.http.*;
 public class HoroscopeForm extends ActionForm {

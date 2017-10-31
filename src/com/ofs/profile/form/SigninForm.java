@@ -1,4 +1,4 @@
-package com.ofs.profile;
+package com.ofs.profile.form;
 import org.apache.struts.validator.ValidatorForm;
 public class SigninForm extends ValidatorForm implements java.io.Serializable {
 	String profileid,password;

@@ -1,6 +1,9 @@
-package com.ofs.profile;
+package com.ofs.profile.action;
 import javax.servlet.http.*;
 import org.apache.struts.action.*;
+
+import com.ofs.profile.form.ForgotForm;
+
 import matrimony.database.Database;
 import java.sql.*;
 public class ForgotAction  extends Action {
