@@ -59,14 +59,17 @@ import org.xml.sax.SAXException;
 				private PreparedStatement pst=null;
 				private ResultSet rs=null;
 				private ResultSetMetaData rsmd=null;
+				private Document doc2;
 
 		private Database(HttpServletRequest request,HttpServletResponse response) throws IOException {
-				this.xml = request.getContextPath()+"WebContent/WEB-INF/database.xml";
+				this.xml = request.getContextPath()+"matrimony.database.database.xml";
 				this.request = request;	
 				this.response = response;
 				this.session = this.request.getSession(true);
 				this.client = this.session.getAttribute("Client")!=null?this.session.getAttribute("Client").toString():"nothing";
-				this.url = new URL(request.getScheme(),request.getServerName(),request.getServerPort(),xml);
+//				this.url = new URL(request.getScheme(),request.getServerName(),request.getServerPort(),xml);
+				javax.servlet.ServletContext sc = this.session.getServletContext();
+			    this.url = sc.getResource("database.xml");
 				this.factory =  DocumentBuilderFactory.newInstance();
 				try {
 					this.domBuilder = factory.newDocumentBuilder();
@@ -75,8 +78,10 @@ import org.xml.sax.SAXException;
 					e1.printStackTrace();
 				}
 				try {
-					this.doc = domBuilder.parse(url.openStream());
-				} catch (SAXException e) {
+					DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+					DocumentBuilder db = dbf.newDocumentBuilder();
+					doc2 = db.parse(this.url.toString());
+				} catch (SAXException | ParserConfigurationException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}

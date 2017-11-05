@@ -18,5 +18,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="/home/ravi/Downloads/Tools/ee.minimum-1.0.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
