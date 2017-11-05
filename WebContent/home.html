@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8"/>
+<head>
+    <title>AngularJS Routes example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+</head>
+
+<body ng-app="sampleApp">
+	<h1>Welcome to Matrimony</h1>
+
+<button href="#/Signin">Sign In</button><br/>
+<button href="#/Register">Create a Profile</button><br/>
+
+
+<div ng-view></div>
+
+<script>
+    var module = angular.module("sampleApp", ['ngRoute']);
+
+    module.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+                when('#/Signin', {
+                    templateUrl: '/Pages/index.jsp',
+                    controller: 'RouteController'
+                }).
+                when('#/Register', {
+                    templateUrl: '/Pages/Register.jsp',
+                    controller: 'RouteController'
+                }).
+                otherwise({
+                    redirectTo: '/home.html'
+                });
+        }]);
+
+    module.controller("RouteController", function($scope) {
+
+    })
+</script>
+<body/>
+<html/>
